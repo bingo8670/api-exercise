@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
       get "/reservations" => "reservations#index", :as => :reservations
 
+      get "/me" => "users#show", :as => :user
+      patch "/me" => "users#update", :as => :update_user
+
       post "/signup" => "auth#signup"
       post "/login" => "auth#login"
       post "/logout" => "auth#logout"
